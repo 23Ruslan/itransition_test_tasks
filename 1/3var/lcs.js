@@ -1,0 +1,1 @@
+function p(l){let n=l.reduce((e,r)=>e.length<=r.length?e:r),t=n.length;for(let r=t;0<=r;--r)for(let e=0;e<=t-r;++e){var g=n.substring(e,e+r);if(l.every(e=>~e.indexOf(g)))return g}}console.log(process.argv.length<3?"":p(process.argv.slice(2)))

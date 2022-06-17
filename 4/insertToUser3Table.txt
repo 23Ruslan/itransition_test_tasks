@@ -1,0 +1,30 @@
+INSERT INTO `user3`
+(`id`, `first_name`, `last_name`, `email`, `phone`, `comments`, `status`) VALUES
+(NULL, 'Amanda', 'Nunes', 'an@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda13', 'N13', 'an13@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda12', 'N12', 'an@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda11', 'N11', 'an@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda10', 'N10', 'a10@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda9', 'N9', 'an9@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda8', 'N8', 'an8@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda7', 'N7', 'an7@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda6', 'N6', 'an6@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda5', 'N5', 'an5@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda4', 'N4', 'an4@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda3', 'N3', 'an3@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda2', 'N2', 'an2@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda1', 'N1', 'an1@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda0', 'N0', 'an0@ufc.com', '515161 151351', '' , 'active'),
+(NULL, 'Amanda34', 'N34', 'an34@ufc.com', '515161 151351', '' , 'active')
+
+я подключил js-файл в html <script src="../../app.js"></script>
+в js-файле написал обработку действия:
+document.querySelector('.b-delete').addEventListener('click', () => {
+  let data = document.querySelector().value;
+  document.querySelector('.out-6').innerHTML = data;
+})
+
+'.out-6' и '.b-delete' пробовал брать и из id, и из class нужных соответствующих html элементов
+
+в итоге выводит ошибку в powerShell 
+ReferenceError: document is not defined

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Administration</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <style>
+ #waves {
+	 width: 100%;
+	 height: 100%;
+}
+ #waves .wave {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 transform-origin: 50% 50%;
+	 clip-path: polygon(50% 50%, 47.5% 0%, 52.5% 0%);
+	 overflow: hidden;
+	 backface-visibility: hidden;
+	 mix-blend-mode: difference;
+}
+ #waves .wave::before {
+	 content: '';
+	 position: absolute;
+	 left: 50%;
+	 height: 100%;
+	 width: 100px;
+	 border-radius: 150px 150px 0 0;
+	 background: red;
+	 backface-visibility: hidden;
+	 transform: translate(-150px, 20px);
+}
+ #waves .wave:nth-child(1) {
+	 transform: rotateZ(0deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(1)::before {
+	 animation: wavy 3600ms 0ms ease-in infinite;
+}
+ #waves .wave:nth-child(2) {
+	 transform: rotateZ(10deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(2)::before {
+	 animation: wavy 3600ms 100ms ease-in infinite;
+}
+ #waves .wave:nth-child(3) {
+	 transform: rotateZ(20deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(3)::before {
+	 animation: wavy 3600ms 200ms ease-in infinite;
+}
+ #waves .wave:nth-child(4) {
+	 transform: rotateZ(30deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(4)::before {
+	 animation: wavy 3600ms 300ms ease-in infinite;
+}
+ #waves .wave:nth-child(5) {
+	 transform: rotateZ(40deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(5)::before {
+	 animation: wavy 3600ms 400ms ease-in infinite;
+}
+ #waves .wave:nth-child(6) {
+	 transform: rotateZ(50deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(6)::before {
+	 animation: wavy 3600ms 500ms ease-in infinite;
+}
+ #waves .wave:nth-child(7) {
+	 transform: rotateZ(60deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(7)::before {
+	 animation: wavy 3600ms 600ms ease-in infinite;
+}
+ #waves .wave:nth-child(8) {
+	 transform: rotateZ(70deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(8)::before {
+	 animation: wavy 3600ms 700ms ease-in infinite;
+}
+ #waves .wave:nth-child(9) {
+	 transform: rotateZ(80deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(9)::before {
+	 animation: wavy 3600ms 800ms ease-in infinite;
+}
+ #waves .wave:nth-child(10) {
+	 transform: rotateZ(90deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(10)::before {
+	 animation: wavy 3600ms 900ms ease-in infinite;
+}
+ #waves .wave:nth-child(11) {
+	 transform: rotateZ(100deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(11)::before {
+	 animation: wavy 3600ms 1000ms ease-in infinite;
+}
+ #waves .wave:nth-child(12) {
+	 transform: rotateZ(110deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(12)::before {
+	 animation: wavy 3600ms 1100ms ease-in infinite;
+}
+ #waves .wave:nth-child(13) {
+	 transform: rotateZ(120deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(13)::before {
+	 animation: wavy 3600ms 1200ms ease-in infinite;
+}
+ #waves .wave:nth-child(14) {
+	 transform: rotateZ(130deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(14)::before {
+	 animation: wavy 3600ms 1300ms ease-in infinite;
+}
+ #waves .wave:nth-child(15) {
+	 transform: rotateZ(140deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(15)::before {
+	 animation: wavy 3600ms 1400ms ease-in infinite;
+}
+ #waves .wave:nth-child(16) {
+	 transform: rotateZ(150deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(16)::before {
+	 animation: wavy 3600ms 1500ms ease-in infinite;
+}
+ #waves .wave:nth-child(17) {
+	 transform: rotateZ(160deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(17)::before {
+	 animation: wavy 3600ms 1600ms ease-in infinite;
+}
+ #waves .wave:nth-child(18) {
+	 transform: rotateZ(170deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(18)::before {
+	 animation: wavy 3600ms 1700ms ease-in infinite;
+}
+ #waves .wave:nth-child(19) {
+	 transform: rotateZ(180deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(19)::before {
+	 animation: wavy 3600ms 1800ms ease-in infinite;
+}
+ #waves .wave:nth-child(20) {
+	 transform: rotateZ(190deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(20)::before {
+	 animation: wavy 3600ms 1900ms ease-in infinite;
+}
+ #waves .wave:nth-child(21) {
+	 transform: rotateZ(200deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(21)::before {
+	 animation: wavy 3600ms 2000ms ease-in infinite;
+}
+ #waves .wave:nth-child(22) {
+	 transform: rotateZ(210deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(22)::before {
+	 animation: wavy 3600ms 2100ms ease-in infinite;
+}
+ #waves .wave:nth-child(23) {
+	 transform: rotateZ(220deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(23)::before {
+	 animation: wavy 3600ms 2200ms ease-in infinite;
+}
+ #waves .wave:nth-child(24) {
+	 transform: rotateZ(230deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(24)::before {
+	 animation: wavy 3600ms 2300ms ease-in infinite;
+}
+ #waves .wave:nth-child(25) {
+	 transform: rotateZ(240deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(25)::before {
+	 animation: wavy 3600ms 2400ms ease-in infinite;
+}
+ #waves .wave:nth-child(26) {
+	 transform: rotateZ(250deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(26)::before {
+	 animation: wavy 3600ms 2500ms ease-in infinite;
+}
+ #waves .wave:nth-child(27) {
+	 transform: rotateZ(260deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(27)::before {
+	 animation: wavy 3600ms 2600ms ease-in infinite;
+}
+ #waves .wave:nth-child(28) {
+	 transform: rotateZ(270deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(28)::before {
+	 animation: wavy 3600ms 2700ms ease-in infinite;
+}
+ #waves .wave:nth-child(29) {
+	 transform: rotateZ(280deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(29)::before {
+	 animation: wavy 3600ms 2800ms ease-in infinite;
+}
+ #waves .wave:nth-child(30) {
+	 transform: rotateZ(290deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(30)::before {
+	 animation: wavy 3600ms 2900ms ease-in infinite;
+}
+ #waves .wave:nth-child(31) {
+	 transform: rotateZ(300deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(31)::before {
+	 animation: wavy 3600ms 3000ms ease-in infinite;
+}
+ #waves .wave:nth-child(32) {
+	 transform: rotateZ(310deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(32)::before {
+	 animation: wavy 3600ms 3100ms ease-in infinite;
+}
+ #waves .wave:nth-child(33) {
+	 transform: rotateZ(320deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(33)::before {
+	 animation: wavy 3600ms 3200ms ease-in infinite;
+}
+ #waves .wave:nth-child(34) {
+	 transform: rotateZ(330deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(34)::before {
+	 animation: wavy 3600ms 3300ms ease-in infinite;
+}
+ #waves .wave:nth-child(35) {
+	 transform: rotateZ(340deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(35)::before {
+	 animation: wavy 3600ms 3400ms ease-in infinite;
+}
+ #waves .wave:nth-child(36) {
+	 transform: rotateZ(350deg) translate(50px, -10px);
+}
+ #waves .wave:nth-child(36)::before {
+	 animation: wavy 3600ms 3500ms ease-in infinite;
+}
+ @keyframes wavy {
+	 0% {
+		 transform: translate(-150px, 20px);
+	}
+	 100% {
+		 transform: translate(100px, 100px) rotateZ(20deg);
+		 background: blue;
+	}
+}
+
+
+/* 3D box */
+@media (min-width: 1400px) {
+.box {
+	display: flex;
+}
+.box .inner {
+	width: 400px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 3.3em;
+	font-family: Helvetica;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.box .inner:first-child {
+	background-color: blue;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+.box .inner:last-child {
+	background-color: gray;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+.box .inner span {
+	position: absolute;
+	animation: marquee 20s linear infinite;
+}
+.box .inner:first-child span {
+	animation-delay: 10s;
+	left: -200%;
+}
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+	to {
+		left: -100%;
+	}
+}
+}
+
+@media (max-width: 1400px) {
+.box {
+	display: flex;
+}
+.box .inner {
+	width: 400px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 4em;
+	font-family: Helvetica;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.box .inner span {
+	position: absolute;
+	animation: marquee 7s linear infinite;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+	to {
+		left: -50%;
+	}
+}
+}
+  </style>
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">User Data Administration</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">main page</a>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search" method="POST" action="/" novalidate>
+        <input class="form-control me-2" type="search" placeholder="name" name="search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search User by Name</button>
+      </form>
+    </div>
+  </div>
+</nav> 
+
+<div class="container pt-4 pb-4">
+  <!-- Content here -->
+     {{{body}}} 
+</div> 
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

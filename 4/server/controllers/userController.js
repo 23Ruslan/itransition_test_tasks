@@ -150,8 +150,6 @@ exports.delete = (req, res) => {
        if(err) throw err; // not connected!
        console.log('Connected as ID' + connection.threadId);
        // User the connection
-       if (req.params.id.slice(0,-1) != 'particles.j' && req.params.id.slice(0,-1) != 'favicon.ic' && req.params.id.slice(0,-1) != 'app.j' 
-       && req.params.id.slice(0,-1) != 'style.cs')
        connection.query('DELETE FROM user3 WHERE id IN ' + '(' + req.params.id.slice(0,-1) +')', [], (err, rows) => {
            // When done with the connection, release it
            connection.release();
@@ -166,7 +164,7 @@ exports.delete = (req, res) => {
      });
 }
 
- // view Users
+ //View Users
  exports.viewall = (req, res) => {
     // Connect to DB
      pool.getConnection((err, connection) => {
